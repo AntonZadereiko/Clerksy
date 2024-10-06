@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Kings&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+$main_font: "Kings", cursive;
+$second_font: "Noto Sans", sans-serif;
+
+@mixin max-screen($res) { 
+    @media screen and (max-width: $res) { 
+      @content; 
+    } 
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1180px;
+    margin: auto;
+}
+
+header{
+    padding: 35px 0;
+    background: rgb(22, 58, 36);
+    @include max-screen(1200px){  
+        padding: 0 15px;
+}
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include max-screen(417px){  
+            flex-wrap: wrap;
+            align-items: center;
+  }
+        .logo{
+            a{
+                text-decoration: none;
+            }
+        }
+        nav{
+            ul{
+                display: flex;
+                li{
+                    list-style: none;
+                    margin-right: 24px;
+                    @include max-screen(561px){  
+                        margin-right: 14px;
+              }
+              
+                    &:last-of-type{
+                        margin-right: 0;
+                        a{
+                            border-radius: 160px;
+                            padding: 15px 25px;
+                            background: rgb(25, 140, 54);
+                            &:hover{
+                                background: rebeccapurple;
+                            }
+                            
+                            @include max-screen(561px){  
+                                padding: 10px 15px;
+                      }
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: rgb(251, 250, 247);
+                        font-family: $second_font;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        letter-spacing: 0%;
+                        text-align: right;
+                        &:hover{
+                            color: yellow;
+                        }
+                        @include max-screen(500px){  
+                            font-size: 12px;
+                  }
+                  @include max-screen(417px){  
+                    font-size: 15px;
+          }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+.main_banner{
+    background: rgb(22, 58, 36);
+    padding-top: 70px;
+    @include max-screen(1200px){  
+              padding: 0 15px;
+    }
+    @include max-screen(961px){  
+        padding-top: 80px;
+}
+@include max-screen(571px){  
+    padding-top: 30px;
+}
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include max-screen(961px){  
+            flex-wrap: wrap;
+            align-items: center;
+  }
+        .main_banner_text{
+            h1{
+                color: rgb(251, 250, 247);
+                font-family: $main_font;
+                font-size: 68px;
+                font-weight: 600;
+                line-height: 65.25px;
+                letter-spacing: 0%;
+                text-align: left;
+                margin-bottom: 18px;
+                max-width: 650px;
+                @include max-screen(571px){  
+                    font-size: 60px;
+          }
+          @include max-screen(507px){  
+            font-size: 50px;
+            margin-bottom: 10px;
+  }
+  @include max-screen(428px){  
+    font-size: 40px;
+}
+@include max-screen(349px){  
+    font-size: 34px;
+}
+            }
+            p{
+                max-width: 475px;
+                color: rgb(251, 250, 247);
+                font-family: $second_font;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 27px;
+                letter-spacing: 0%;
+                text-align: left;
+                @include max-screen(507px){  
+                    font-size: 14px;
+          }
+            }
+        }
+        .main_banner_image{
+            max-width: 738px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+.human{
+    padding: 120px 0;
+    @include max-screen(1200px){  
+        padding-left: 15px;
+        padding-right: 15px;
+}
+@include max-screen(1200px){  
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+    .container{
+        .human_box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include max-screen(673px){  
+                flex-direction: column;
+                align-items: center;
+        }
+            &:nth-child(2){
+            flex-direction: row-reverse;
+            margin-bottom: 113px;
+            @include max-screen(673px){  
+                flex-direction: column;
+                align-items: center;
+        }
+            .human_box_text{
+                h3{
+                    font-size: 51px;
+                }
+            }
+            }
+            .human_box_image{
+                max-width: 492px;
+                @include max-screen(673px){  
+                    margin-bottom: 20px;
+            }
+                img{
+                    width: 100%;
+                }
+            }
+            .human_box_text{
+                h3{
+                    color: rgb(22, 58, 36);
+                    font-family: $main_font;
+                    max-width: 494px;
+                    font-size: 61px;
+                    font-weight: 600;
+                    line-height: 54px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                    margin-bottom: 27px;
+                }
+                p{
+                    max-width: 374px;
+                    color: rgb(22, 58, 36);
+                    font-family: $second_font;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 27px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                    @include max-screen(673px){  
+                        margin-bottom: 20px;
+                }
+                }
+            }
+        }
+        h4{
+            color: rgb(22, 58, 36);
+            font-family: $main_font;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 54px;
+            letter-spacing: 0%;
+            text-align: center;
+            margin-bottom: 66px;
+            @include max-screen(469px){  
+                margin-bottom: 30px;
+        }
+        }
+        .human_photos{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include max-screen(458px){  
+                flex-direction: column;
+                align-items: center;
+        }
+            a{
+                margin-right: 86px;
+                max-width: 110px;
+                img{
+                    width: 100%;
+                }
+                @include max-screen(910px){  
+                    margin-right: 50px;
+            }
+            @include max-screen(767px){  
+                margin-right: 20px;
+        }
+        @include max-screen(458px){  
+            margin-right: 0;
+            margin-bottom: 15px;
+    }
+                &:last-of-type{
+                    margin-right: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
